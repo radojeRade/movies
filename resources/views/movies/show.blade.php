@@ -1,8 +1,5 @@
 @extends('layouts.master')
 
-@section('title', '$movie->title')  
-
-
 @section('content')
 
 <div class="card" style="width: 18rem;">
