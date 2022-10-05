@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/movies', [MoviesController::class, 'index'])->name('movies');
-Route::post('/movies', [MoviesController::class, 'store']);
 Route::get('/movies/create', [MoviesController::class, 'create'])->name('addMovie');
+Route::post('/movies/create', [MoviesController::class, 'store']);
 Route::get('/movies/{id}', [MoviesController::class, 'show'])->name('single-movie');
 

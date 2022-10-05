@@ -20,11 +20,11 @@
   </head>
 
   <body>
-    <header>
+    
     @include('partials.navbar')
-    </header>
+   
 
-    <main role="main" style="padding-top: 20px;">
+    <main role="main">
         <div class="album py-5 bg-muted">
             <div class="container">
 

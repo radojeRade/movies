@@ -28,13 +28,13 @@ class MoviesController extends Controller
 
         $validated = $request->validated();
         Movie::create([
-            'title'=>$validated['title'], // moze i ovako validacija
-            'genre'=>$validated['genre'],
-            
+            'title' => $validated['title'], // moze i ovako validacija
+            'genre' => $validated['genre'],
             'story_line' => $validated['story_line'],
+            'director' => $validated['director'],
             'year' => $validated['year']
             
         ]);
-        return redirect('/movies');
+        return redirect('movies');
     }
 }

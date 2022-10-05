@@ -27,8 +27,8 @@ class CreateMoviesRequest extends FormRequest
             'title' => 'required',
             'story_line' => 'max:1000',
             'genre' => 'required',
-            
-            'year' => 'min:1900|max:2000'
+            'director' => 'min:4',
+            'year' => 'integer|min:1900|max:2000'
         ];
     }
 }
