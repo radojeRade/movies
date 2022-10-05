@@ -8,7 +8,7 @@
     <h5 class="card-title">{{$movie->title}}</h5>
     <p class="card-text">{{$movie->story_line}}</p>
     <p>{{$movie->director}}</p>
-    <p class="card-text">{{$movie->genre}}</p>
+    <p class="card-text"><a href="{{ route('genres', ['genre' => $movie->genre]) }}" > {{$movie->genre}}</a></p>
     <p class="card-text">{{$movie->year}}</p>
 
     <div>

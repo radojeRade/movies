@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\GenresController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MoviesController;
 
@@ -25,6 +26,8 @@ Route::post('/movies/', [MoviesController::class, 'store']);
 Route::get('/movies/{id}', [MoviesController::class, 'show'])->name('single-movie');
 
 Route::post('/movies/{id}/comments', [CommentsController::class, 'store']);
+
+Route::get('/genres/{genre}', [GenresController::class, 'show'])->name('genres');
 
 
 
