@@ -11,6 +11,19 @@
     <p class="card-text">{{$movie->genre}}</p>
     <p class="card-text">{{$movie->year}}</p>
 
+    <div>
+        <h4>Comments:</h4>
+
+        <ul>
+            @foreach($movie->comments as $comment)
+                <li>
+                    {{ $comment->created_at }}
+                    {{ $comment->content }}
+                </li>
+            @endforeach
+        </ul>        
+    </div>
+
   </div>
 </div>
 @endsection

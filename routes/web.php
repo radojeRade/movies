@@ -23,3 +23,7 @@ Route::get('/movies/create', [MoviesController::class, 'create'])->name('addMovi
 Route::post('/movies/create', [MoviesController::class, 'store']);
 Route::get('/movies/{id}', [MoviesController::class, 'show'])->name('single-movie');
 
+Route::post('/posts/{id}/comments', [MoviesController::class, 'store']);
+
+
+

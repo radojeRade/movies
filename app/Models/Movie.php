@@ -13,9 +13,8 @@ class Movie extends Model
 
     protected $fillable = ['title', 'genre', 'director', 'year', 'story_line'];
 
-    // public statfunction show($id){
-    //     $movie = $this->find($id); //proveriti da li ova metoda treba u model
-
-    //     return $movie; //view('movies.show', compact('movie'))
-    // }
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
