@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Http\Requests\CreateMoviesRequest;
 use App\Models\Movie;
 
 use Illuminate\Http\Request;
@@ -22,5 +24,17 @@ class MoviesController extends Controller
     public function create(){
         return view('movies.create');
     }
-    
+    public function store(CreateMoviesRequest $request){
+
+        $validated = $request->validated();
+        Movie::create([
+            'title'=>$validated['title'], // moze i ovako validacija
+            'genre'=>$validated['genre'],
+            
+            'story_line' => $validated['story_line'],
+            'year' => $validated['year']
+            
+        ]);
+        return redirect('/movies');
+    }
 }
