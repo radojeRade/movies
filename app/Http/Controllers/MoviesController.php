@@ -35,6 +35,6 @@ class MoviesController extends Controller
             'year' => $validated['year']
             
         ]);
-        return redirect('movies');
+        return redirect('/movies');
     }
 }

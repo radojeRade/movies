@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MoviesController;
 
@@ -20,10 +21,10 @@ Route::get('/', function () {
 
 Route::get('/movies', [MoviesController::class, 'index'])->name('movies');
 Route::get('/movies/create', [MoviesController::class, 'create'])->name('addMovie');
-Route::post('/movies/create', [MoviesController::class, 'store']);
+Route::post('/movies/', [MoviesController::class, 'store']);
 Route::get('/movies/{id}', [MoviesController::class, 'show'])->name('single-movie');
 
-Route::post('/posts/{id}/comments', [MoviesController::class, 'store']);
+Route::post('/movies/{id}/comments', [CommentsController::class, 'store']);
 
 
 

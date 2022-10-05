@@ -3,7 +3,7 @@
 @section('title', 'Create new movie')
 
 @section('content')
-    <form method="POST" action="/movies/create">
+    <form method="POST" action="/movies">
         @csrf
         <div class="mb-3">
             <label class="form-label">Title</label>
