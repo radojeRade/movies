@@ -20,6 +20,10 @@ class MoviesController extends Controller
 
         return view('movies.show', compact('movie'));
     }
+    public function getLastFiveMovies(){
+        $movies = Movie::latest()->take(5)->get();
+        return view('partials.sidebar', compact('movies'));
+    }
 
     public function create(){
         return view('movies.create');

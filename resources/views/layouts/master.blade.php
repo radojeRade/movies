@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="css/album.css" rel="stylesheet">
+    <link href="../.css/app.css" rel="stylesheet">
+    @include('partials.style')
     
   </head>
 
@@ -25,8 +26,9 @@
    
 
     <main role="main">
-        <div class="album py-5 bg-muted">
-            <div class="container">
+    @include('partials.sidebar')
+        <div class="album py-5 bg-muted" >
+            <div class="container" style=" align-items: center">
 
                 @yield('content')
         

@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="https://lajoyalink.com/wp-content/uploads/2018/03/Movie.jpg" alt="Card image cap">
   <div class="card-body">
